@@ -1,10 +1,11 @@
 {
   "name": "hcu",
-  "version": "1.0.3",
-  "description": "components - hooks - utils",
+  "version": "1.1.0",
+  "description": "React: components - hooks - utils",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npm publish --access public"
   },
   "author": "rminmh@gmail.com",
   "license": "ISC",

@@ -1,3 +1,5 @@
-export * as AttomComponents from "./src/Attom";
-export * as Hooks from "./src/hooks";
-export * as Utils from "./src/utils";
+const Attom = require("./src/Attom/index");
+const hooks = require("./src/hooks/index");
+const utils = require("./src/utils/index");
+
+module.exports = { Attom, hooks, utils };
