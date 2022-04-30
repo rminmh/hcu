@@ -7,7 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish": "npm publish --access public"
   },
-  "author": "rminmh@gmail.com",
-  "license": "ISC",
-  "repository": "https://github.com/rminmh/hcu"
+  "author": "alii_mahmoodi <rminmh@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rminmh/hcu"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  }
 }
