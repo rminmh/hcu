@@ -1,0 +1,76 @@
+// @import '/public/framework/variables.scss';
+
+// ____________________________________________ COLORS ____________________________________________ //
+.container {
+	--color-background: #fff0;
+}
+
+// ____________________________________________ THEME ____________________________________________ //
+// body[_theme='dark'] .container {	}
+
+// ____________________________________________ LANGUAGE ____________________________________________ //
+// body:not([_language='fa']) .container {    }
+
+// ____________________________________________ STYLES ____________________________________________ //
+// .container {   }
+
+// ____________________________________________ MEDIA SCREEN ____________________________________________ //
+// @media (min-width: $md-size) { .container {  }  }
+// @media (min-width: $xxl-size) {  .container {  }   }
+
+.container {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: var(--color-background);
+	color: var(--color-base);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+	text-align: center;
+	z-index: 2;
+
+	.captions {
+		i {
+			opacity: 0.8;
+			font-size: 50px;
+
+			&:hover {
+				animation: rotate 1s linear 1;
+				filter: contrast(1.05);
+				opacity: 1;
+			}
+		}
+
+		font-size: 14px;
+	}
+
+	.flash {
+		animation: flash 3s ease-in infinite;
+	}
+}
+
+@keyframes flash {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.3;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}

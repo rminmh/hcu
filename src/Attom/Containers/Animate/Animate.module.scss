@@ -1,0 +1,105 @@
+.container {
+	transition: all 0.5s;
+	animation-timing-function: ease-out;
+	position: relative;
+
+	&.hideOvFl {
+		overflow: hidden;
+	}
+
+	//opacity
+	&[_mode*='opacity-mode'] {
+		opacity: 0;
+		&[_render='rendered'] {
+			opacity: 1;
+		}
+	}
+
+	//top
+	&[_mode*='enter-top-mode'] {
+		top: -25vh;
+		&[_render='rendered'] {
+			top: 0;
+		}
+	}
+
+	//right
+	&[_mode*='enter-right-mode'] {
+		right: -25vw;
+		&[_render='rendered'] {
+			right: 0;
+		}
+	}
+
+	//left
+	&[_mode*='enter-left-mode'] {
+		left: -25vw;
+		&[_render='rendered'] {
+			left: 0;
+		}
+	}
+
+	//bottom
+	&[_mode*='enter-bottom-mode'] {
+		bottom: -100vh;
+		&[_render='rendered'] {
+			bottom: 0;
+		}
+	}
+
+	// top-right
+	&[_mode*='enter-top-right-mode'] {
+		right: -25vw;
+		top: -25vh;
+		&[_render='rendered'] {
+			right: 0;
+			top: 0;
+		}
+	}
+
+	// top-left
+	&[_mode*='enter-top-left-mode'] {
+		left: -25vw;
+		top: -25vh;
+		&[_render='rendered'] {
+			left: 0;
+			top: 0;
+		}
+	}
+
+	// bottom-right
+	&[_mode*='enter-bottom-right-mode'] {
+		right: -25vw;
+		bottom: -25vh;
+		&[_render='rendered'] {
+			right: 0;
+			bottom: 0;
+		}
+	}
+
+	// bottom-left
+	&[_mode*='enter-bottom-left-mode'] {
+		left: -25vw;
+		bottom: -25vh;
+		&[_render='rendered'] {
+			left: 0;
+			bottom: 0;
+		}
+	}
+
+	// zoom-in
+	&[_mode*='zoom-in-mode'] {
+		transform: scale(0);
+		&[_render='rendered'] {
+			transform: none;
+		}
+	}
+
+	// zoom-out
+	&[_mode*='zoom-out-mode'] {
+		transform: scale(1.5);
+		&[_render='rendered'] {
+			transform: none;
+		}
+	}
+}

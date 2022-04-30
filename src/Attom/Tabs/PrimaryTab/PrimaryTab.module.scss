@@ -1,0 +1,40 @@
+// ____________________________________________ VARIABLE'S ____________________________________________ //
+// .container {   }
+
+// ____________________________________________ THEME'S ____________________________________________ //
+// body[_theme='light'] .container {   }
+
+// ____________________________________________ LANGUAGE'S ____________________________________________ //
+// body:not([_language='fa']) .container {    }
+
+// ____________________________________________ STYLE'S ____________________________________________ //
+.container {
+	.header {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		padding: 15px;
+
+		.headerItem {
+			padding: 15px;
+			flex-grow: 1;
+			background-color: white;
+			color: #000;
+			cursor: pointer;
+			user-select: none;
+			border: solid 2px blue;
+			border-radius: 10px;
+
+			&[_status='active'] {
+				border-color: red;
+			}
+		}
+	}
+}
+
+// ______________________________________ MEDIA SCREEN'S (MOBILE FIRST) _______________________________________ //
+// @screen sm { .container {  } }
+// @screen md { .container {  } }
+// @screen lg { .container {  } }
+// @screen xl { .container {  } }
+// @screen 2xl { .container {  } }

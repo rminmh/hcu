@@ -1,0 +1,53 @@
+// @import '/public/framework/variables.scss';
+
+// ____________________________________________ COLORS ____________________________________________ //
+// .container {	}
+
+// ____________________________________________ THEME ____________________________________________ //
+// body[_theme='dark'] .container {	}
+
+// ____________________________________________ LANGUAGE ____________________________________________ //
+// body:not([_language='fa']) .container {    }
+
+// ____________________________________________ STYLES ____________________________________________ //
+.container {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	//
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.wrapper {
+		position: relative;
+		max-height: 90vh;
+		max-width: 90vw;
+		min-width: max(10vw, 200px);
+		min-height: max(10vh, 200px);
+		overflow-y: auto;
+
+		&[_overflow='none'] {
+			overflow: unset;
+		}
+
+		&::-webkit-scrollbar {
+			width: 10px;
+			background-color: #0008;
+		}
+		&::-webkit-scrollbar-thumb {
+			border-radius: 8px;
+			background-color: #fff8;
+		}
+	}
+}
+
+// ____________________________________________ MEDIA SCREEN ____________________________________________ //
+// @media (max-width: ( $md-size - 1) ) { .container {  }  }
+// @media (max-width: ( $lg-size - 1) ) { .container {  }  }
+// @media (max-width: ( $xl-size - 1) ) { .container {  }  }
+// @media (max-width: ( $xxl-size - 1) ) { .container {  }  }

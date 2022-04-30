@@ -1,0 +1,39 @@
+// ____________________________________________ VARIABLE'S ____________________________________________ //
+// .container {   }
+
+// ____________________________________________ THEME'S ____________________________________________ //
+// body[_theme='light'] .container {   }
+
+// ____________________________________________ LANGUAGE'S ____________________________________________ //
+// body:not([_language='fa']) .container {    }
+
+// ____________________________________________ STYLES ____________________________________________ //
+.container {
+	// th
+	& > *:nth-child(1) > * {
+		border-bottom: 1px solid #000;
+	}
+
+	//tr
+	& > *:nth-child(2) > * {
+		border-bottom: 1px solid #666;
+		color: #666;
+		opacity: 0.9;
+	}
+
+	//th & tr
+	& > * > * {
+		min-height: 50px;
+	}
+
+	//td
+	& > * > * > * {
+	}
+}
+
+// ______________________________________ MEDIA SCREEN'S (MOBILE FIRST) _______________________________________ //
+// @screen sm { .container {  } }
+// @screen md { .container {  } }
+// @screen lg { .container {  } }
+// @screen xl { .container {  } }
+// @screen 2xl { .container {  } }

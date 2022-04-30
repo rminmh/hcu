@@ -1,0 +1,76 @@
+// @import '/src/dist/framework/variables.scss';
+
+// ____________________________________________ COLORS ____________________________________________ //
+// .container {   }
+
+// ____________________________________________ THEME ____________________________________________ //
+// body[_theme='dark'] .container {   }
+
+// ____________________________________________ LANGUAGE ____________________________________________ //
+// body:not([_language='fa']) .container {    }
+
+// ____________________________________________ STYLES ____________________________________________ //
+.container {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+	text-align: center;
+	z-index: 3;
+	max-height: 90vh;
+
+	.loader {
+		opacity: 0.7;
+		min-height: 90px;
+		max-height: 75%;
+		margin: 20px 0;
+	}
+
+	// .loading {
+	// 	position: fixed;
+	// 	top: 0;
+	// 	bottom: 0;
+	// 	left: calc(0vw - 50px);
+	// 	z-index: 1002;
+	// 	width: 50px;
+	// 	background-color: #fff;
+	// 	// box-shadow: 0px 0px 5px 5px #fff;
+	// 	transition: 0.3s all;
+	// 	animation: loading 1.5s both linear;
+	// }
+}
+
+@keyframes loading {
+	0% {
+		filter: none;
+	}
+
+	50% {
+		filter: contrast(0.3) hue-rotate(20deg);
+		transform: scaleX(1.01);
+	}
+
+	100% {
+		filter: none;
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotateY(0deg);
+	}
+	100% {
+		transform: rotateY(360deg);
+	}
+}
+
+// ____________________________________________ MEDIA SCREEN ____________________________________________ //
+// @media (max-width: ( $md-size - 1) ) { .container {  }  }
+// @media (max-width: ( $lg-size - 1) ) { .container {  }  }
+// @media (max-width: ( $xl-size - 1) ) { .container {  }  }
+// @media (max-width: ( $xxl-size - 1) ) { .container {  }  }

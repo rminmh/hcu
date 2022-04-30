@@ -1,0 +1,82 @@
+// @import '/public/framework/variables.scss';
+
+// ____________________________________________ COLORS ____________________________________________ //
+.container {
+	--color-background-pc: #ffffff;
+	--color-shadow-pc: #0004;
+	--color-border-pc: #666;
+}
+
+// ____________________________________________ THEME ____________________________________________ //
+// body[_theme='dark'] .container {	}
+
+// ____________________________________________ LANGUAGE ____________________________________________ //
+// body:not([_language='fa']) .container {    }
+
+// ____________________________________________ STYLES ____________________________________________ //
+
+.container {
+	position: relative;
+
+	.body {
+		width: 100%;
+		background-color: var(--color-background-pc);
+		margin: auto;
+		border-radius: 3px;
+
+		&[_features*='transparent'] {
+			background-color: transparent;
+		}
+
+		&[_features*='shadow'] {
+			box-shadow: 0 2px 6px var(--color-shadow-pc);
+		}
+
+		&[_features*='border'] {
+			border: 1px solid var(--color-border-pc);
+		}
+
+		&[_features*='radius'] {
+			border-radius: 8px;
+		}
+
+		&[_features*='hoverstyle'] {
+			&:hover {
+				animation: keyframe-shadow 0.5s ease-out;
+			}
+		}
+
+		&[_features*='loading'],
+		&[_features*='fail'] {
+			filter: blur(3px);
+			opacity: 0.5;
+			pointer-events: none;
+		}
+	}
+}
+
+@keyframes keyframe-shadow {
+	0% {
+		box-shadow: 0 0 0 #4c66bb00;
+		// transform: scale(1);
+	}
+	50% {
+		box-shadow: 0 0 5px 2px #4c66bb33;
+		// transform: scaleY(1.005);
+	}
+	100% {
+		box-shadow: 0 0 0 #4c66bb00;
+		// transform: scale(1);
+	}
+}
+
+// ______________________________________ MEDIA SCREEN (DESKTOP FIRST) ______________________________________ //
+// @media (max-width: ( $md-size - 1) ) { .container {  }  }
+// @media (max-width: ( $lg-size - 1) ) { .container {  }  }
+// @media (max-width: ( $xl-size - 1) ) { .container {  }  }
+// @media (max-width: ( $xxl-size - 1) ) { .container {  }  }
+
+// ______________________________________ MEDIA SCREEN (MOBILE FIRST) _______________________________________ //
+// @media (min-width: ( $lg-size) ) { .container {  }  }
+// @media (min-width: ( $xl-size) ) { .container {  }  }
+// @media (min-width: ( $xxl-size) ) { .container {  }  }
